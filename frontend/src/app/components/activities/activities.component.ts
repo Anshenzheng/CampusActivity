@@ -53,7 +53,7 @@ import { AuthService } from '../../services/auth.service';
           </div>
           
           <p class="activity-desc" *ngIf="activity.description">
-            {{ activity.description | slice:0:100 }}{{ activity.description?.length > 100 ? '...' : '' }}
+            {{ activity.description | slice:0:100 }}{{ activity.description.length > 100 ? '...' : '' }}
           </p>
           
           <div class="activity-footer">
