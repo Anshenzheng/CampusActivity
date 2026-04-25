@@ -58,10 +58,12 @@ import { Registration, PageResponse, RegistrationStatus } from '../../models/mod
           </tbody>
         </table>
         
-        <div *ngIf="registration.reason" class="reason-box" *ngFor="let registration of registrations">
-          <span class="reason-label">审核意见：</span>
-          <span class="reason-text">{{ registration.reason }}</span>
-        </div>
+        <ng-container *ngFor="let registration of registrations">
+          <div *ngIf="registration.reason" class="reason-box">
+            <span class="reason-label">审核意见：</span>
+            <span class="reason-text">{{ registration.reason }}</span>
+          </div>
+        </ng-container>
       </div>
       
       <div class="pagination-section" *ngIf="totalPages > 1">
