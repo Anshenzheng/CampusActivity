@@ -8,6 +8,8 @@ export interface User {
   createdAt: string;
 }
 
+export type RegistrationStatus = 'PENDING' | 'APPROVED' | 'REJECTED';
+
 export interface Activity {
   id: number;
   title: string;
@@ -30,7 +32,7 @@ export interface Registration {
   userRealName: string;
   userEmail: string;
   userPhone?: string;
-  status: 'PENDING' | 'APPROVED' | 'REJECTED';
+  status: RegistrationStatus;
   reason?: string;
   createdAt: string;
 }
